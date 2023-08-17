@@ -1,0 +1,69 @@
+git init
+para configuração de acesso específico
+git config user.name "nome do usuário"
+git config user.email "email do usuário"
+
+para configuração de acesso global
+git config --global user.name "nome do usuário"
+git config --global user.email "email do usuário"
+
+git add -A
+git commit -m "Arquivo aula_git.txt criado"
+git add -A
+git commit -m "Arquivo comandos.txt criado"
+Criar nova branch
+git branch nova_branch
+
+Mudar para nova branch
+git checkout nova_branch
+
+Puchar as alterações de outra branch
+#git merge NOME DA BRANCH que tem os arquivos alterados
+git merge nova_branch
+
+é possível aninhar os comandos separando estes por ;
+Ex.: git branch nova_branch; git checkout nova_branch
+
+--------------------------------------------------------------
+
+Clonar repositório
+via https
+git clone <endereço do repositório que será clonado>
+
+ou
+
+via github cli
+gh repo clone <endereço do repositório que será clonado>
+
+--------------------------------------------------------------
+
+Criação de novo repositório
+git remote add origin https://github.com/nomedousuario/nomedorepositorio.git
+git branch -M main
+git push -u origin main
+
+git push - Enviar commits do nosso repositório local ao repositório remoto.
+
+git remote show origin - Verifica se nosso repositório local está atualizado
+com o repositório remoto.
+
+git pull - Atualiza nosso repositório local com as últimas informações no
+repositório remoto.
+
+git pull https://github.com/nomedousuario/nomedorepositorio.git.git NomedaBranch - para
+conectar com o repositório clonado e atualizar o repositório local.
+
+git merge - Primeiro ir para a branch que deve RECEBER as atualizações via
+git checkout NOME-DA-BRANCH e executar o git merge NOME-DA-BRANCH-COM-AS-ATUALIZACOES.
+
+
+-----------------------------------------------------------------------------------------------------
+Conectar com o repositório criado e enviar arquivos
+
+git remote add origin https://github.com/nomedousuario/nomedorepositorio.git
+git branch -M main
+git push -u origin main
+
+-----------------------------------------------------------------------------------------------------
+para ver as configurações do usuário, dentre outras informações
+git config --list

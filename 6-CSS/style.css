@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+h1  {
+    color: aqua;
+}
+
+div {
+    background-color: bisque;
+    padding: 65px;
+    margin: 84px;
+    border: 18px solid;  
+    border-color: greenyellow;  
+}
+
+.caixa {
+    color: brown;
+}
+
+.caixa-do-meio {
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    padding-left: 80px;
+    background-color: antiquewhite;
+}
+
+#ultima-caixa {
+    color: red;
+}
+
+p {
+    background-color: darkgrey;
+    
+}

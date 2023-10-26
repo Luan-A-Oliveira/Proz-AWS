@@ -1,0 +1,22 @@
+CREATE PROCEDURE RelatorioVendas
+AS
+BEGIN    
+    CREATE TABLE #Relatorio (
+        DiaVenda DATE,
+        QntComprados INT
+    )
+    
+    INSERT INTO #Relatorio (DiaVenda, QntComprados)
+    SELECT
+        DiaVenda,
+        SUM(Quantidade) AS QntCompradosComprados
+    FROM
+        TabelaVendas
+    GROUP BY
+        DiaVenda
+
+    
+    SELECT * FROM #RelatorioVendas
+
+    DROP TABLE #RelatorioVendas
+END

@@ -1,0 +1,30 @@
+CREATE TABLE Marca (
+    id_marca INT AUTO_INCREMENT PRIMARY KEY,
+    nome_marca VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Cerveja (
+    id_cerveja INT AUTO_INCREMENT PRIMARY KEY,
+    nome_cerveja VARCHAR(50) NOT NULL,
+    tipo_cerveja VARCHAR(50),
+    marca_id INT,
+    FOREIGN KEY (marca_id) REFERENCES Marca(id_marca)
+);
+
+INSERT INTO Marca (nome_marca) VALUES
+    ('Ambev'),
+    ('Heineken'),
+    ('Grupo petropolis');
+
+
+INSERT INTO Cerveja (nome_cerveja, tipo_cerveja, marca_id) VALUES
+    ('Amstel','lager', 2),
+    ('Brahma', 'pilsen', 1),
+    ('itaipava', 'pilsen', 3);
+
+
+SELECT Cerveja.nome_cerveja, Cerveja.tipo_cerveja, Marca.nome_marca
+FROM Cerveja
+JOIN Marca ON Cerveja.marca_id = Marca.id_marca;
+
+SELECT * FROM Marca, Cerveja;

@@ -1,0 +1,7 @@
+CREATE TABLE Aluno (
+    id_aluno INT AUTO_INCREMENT PRIMARY KEY,
+    nome_aluno VARCHAR(50) NOT NULL,
+    email_aluno VARCHAR(50),
+    endereco_aluno VARCHAR(50),
+    
+);
